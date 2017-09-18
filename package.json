@@ -5,7 +5,6 @@
   "author": "Alexei Accio <accio@aledo-pro.ru>",
   "private": true,
   "scripts": {
-    "publish": "npm install js-beautify@1.6.14 && npm install && nuxt generate",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
@@ -14,9 +13,9 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "cross-env": "^5.0.5",
-    "js-beautify": "^1.6.14",
-    "nuxt": "^1.0.0-rc11"
+    "nuxt": "^1.0.0-rc11",
+    "prismic-dom": "^2.0.3",
+    "prismic-javascript": "^1.3.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -27,6 +26,10 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint-plugin-standard": "^3.0.1",
+    "js-beautify": "^1.6.14"
+  },
+  "resolutions": {
+    "js-beautify": "1.6.14"
   }
 }
