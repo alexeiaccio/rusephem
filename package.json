@@ -5,8 +5,7 @@
   "author": "Alexei Accio <accio@aledo-pro.ru>",
   "private": true,
   "scripts": {
-    "prepublish": "npm install js-beautify@1.6.14",
-    "publish": "npm install && nuxt generate",
+    "publish": "npm install js-beautify@1.6.14 && npm install && nuxt generate",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
