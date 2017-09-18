@@ -5,6 +5,7 @@
   "author": "Alexei Accio <accio@aledo-pro.ru>",
   "private": true,
   "scripts": {
+    "prepublish": "npm install js-beautify@1.6.14",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
@@ -13,6 +14,8 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "cross-env": "^5.0.5",
+    "js-beautify": "^1.6.14",
     "nuxt": "^1.0.0-rc11"
   },
   "devDependencies": {
