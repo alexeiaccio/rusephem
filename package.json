@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "prepublish": "npm install js-beautify@1.6.14",
+    "publish": "npm install && nuxt generate",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
