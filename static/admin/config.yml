@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: alexeiaccio/rusephem # Path to your Github repository
+  branch: master # Branch to update
+
+publish_mode: editorial_workflow
+
+media_folder: "assets/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+collections:
+  - name: "post"
+    label: "Post"
+    folder: "markdown/post"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
