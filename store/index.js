@@ -29,7 +29,7 @@ const makeStore = () => {
             title: 'New',
             created_at: '09/21/2017',
             meta: {
-              id: 1,
+              id: '2017-09-21-new',
               name: 'New',
               content: 'New'
             }
@@ -40,7 +40,7 @@ const makeStore = () => {
             title: 'Another',
             created_at: '09/27/2017',
             meta: {
-              id: 1,
+              id: '2017-09-27-another',
               name: 'Another',
               content: 'Another'
             }
