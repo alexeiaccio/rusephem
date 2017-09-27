@@ -23,7 +23,8 @@ module.exports = {
   generate: {
     routes: [
       '/',
-      '/new'
+      '/new',
+      '/another'
     ]
   },
   /**/

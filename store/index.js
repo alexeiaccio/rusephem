@@ -33,6 +33,17 @@ const makeStore = () => {
               name: 'New',
               content: 'New'
             }
+          },
+          {
+            id: '2017-09-27-another',
+            slug: 'another',
+            title: 'Another',
+            created_at: '09/27/2017',
+            meta: {
+              id: 1,
+              name: 'Another',
+              content: 'Another'
+            }
           }
         ]})
       }
