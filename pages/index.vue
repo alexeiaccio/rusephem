@@ -37,9 +37,7 @@ export default {
       }]
     }
   },
-  fetch ({
-    store
-  }) {
+  fetch ({ store }) {
     store.dispatch('getPosts')
   },
   computed: {
