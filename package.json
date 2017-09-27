@@ -13,10 +13,8 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "fs": "0.0.1-security",
-    "fs-jetpack": "^1.2.0",
-    "nuxt": "^1.0.0-rc11",
-    "vue-markdown": "^2.2.4"
+    "@nuxtjs/markdownit": "^1.1.2",
+    "nuxt": "^1.0.0-rc11"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -28,6 +26,7 @@
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
-    "vue-markdown-loader": "^2.2.1"
+    "vue-markdown-loader": "^2.2.1",
+    "markdown-it-meta": "latest"
   }
 }

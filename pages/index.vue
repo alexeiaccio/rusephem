@@ -1,19 +1,23 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        NUXT
-      </h1>
-      <h2 class="subtitle">
-        Nuxt + NetlifyCMS + Netlify
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
+<section class="container">
+  <div>
+    <logo/>
+    <h1 class="title">
+    NUXT
+    </h1>
+    <h2 class="subtitle">
+    Nuxt + NetlifyCMS + Netlify
+    </h2>
+    <div class="links">
+      <div v-for="post in posts">
+        <div>
+          <h6 v-html="post.created_at"></h6>
+          <h5><router-link :to="{ name: 'slug', params: { slug: post.slug }}">{{post.title}}</router-link></h5>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 </template>
 
 <script>
@@ -22,6 +26,26 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
+  },
+  head () {
+    return {
+      title: 'First Last',
+      meta: [{
+        hid: 'home',
+        name: 'meta name',
+        content: 'meta content seo goodness'
+      }]
+    }
+  },
+  fetch ({
+    store
+  }) {
+    store.dispatch('getPosts')
+  },
+  computed: {
+    posts () {
+      return this.$store.state.posts
+    }
   }
 }
 </script>

@@ -20,6 +20,24 @@ module.exports = {
       href: '/favicon.ico'
     }]
   },
+  generate: {
+    routes: [
+      '/',
+      '/new'
+    ]
+  },
+  /**/
+  modules: [
+    '@nuxtjs/markdownit'
+  ],
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    use: [
+      'markdown-it-meta'
+    ]
+  },
   /*
    ** Customize the progress bar color
    */
@@ -42,13 +60,19 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    },
-    extend(config, ctx) {
-      config.module.rules.push({
-        enforce: 'pre',
-        test: /\.md$/,
-        loader: 'vue-markdown-loader'
-      })
     }
+    /*,
+        extend(config, ctx) {
+          config.module.rules.push({
+            enforce: 'pre',
+            test: /\.md$/,
+            loader: 'vue-markdown-loader',
+            options: {
+              use: [
+                require('markdown-it-meta')
+              ]
+            }     
+          })
+        }*/
   }
 }
